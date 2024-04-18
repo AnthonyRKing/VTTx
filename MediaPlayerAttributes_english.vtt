@@ -1,0 +1,301 @@
+WEBVTT
+
+1
+00:00:00.799 --> 00:00:04.840
+Hello everybody
+In this short video I will show you how to
+
+2
+00:00:04.084 --> 00:00:09.095
+use
+the attributes that come with the video and
+
+3
+00:00:09.095 --> 00:00:15.097
+audio elements
+So... we will start in a JS Bin...
+
+4
+00:00:15.097 --> 00:00:20.366
+In order to embed a video, you first start
+by
+
+5
+00:00:21.239 --> 00:00:29.264
+adding a video element to your web page
+Usually, what we do is that we first
+
+6
+00:00:29.489 --> 00:00:35.370
+provide a small message or maybe some links
+to download the in case the browser
+
+7
+00:00:35.037 --> 00:00:42.566
+does not support the video element.
+So we write "your browser does not support
+
+8
+00:00:42.899 --> 00:00:48.940
+the video
+element, please download the video at...".
+
+9
+00:00:48.094 --> 00:00:55.943
+I will add the link later.
+One of the simplest way to embed a video is
+
+10
+00:00:56.789 --> 00:00:59.825
+to use
+the src attribute with a URL.
+
+11
+00:01:00.149 --> 00:01:07.730
+I'm just using a URL I prepared...ok, like
+that!
+
+12
+00:01:07.073 --> 00:01:13.080
+You can see that the video... there is an
+area
+
+13
+00:01:13.008 --> 00:01:16.085
+...black... that appeared here, on the right
+(of the screen)
+
+14
+00:01:17.057 --> 00:01:24.108
+I'm adding "controls", this is a boolean attribute.
+It's true if it's present, or if it's not
+
+15
+00:01:25.008 --> 00:01:30.060
+empty, tou can type in anything here... and
+it's false if it's omitted.
+
+16
+00:01:30.006 --> 00:01:34.011
+I omit it and the control bar disappears.
+I prefer to use it
+
+17
+00:01:34.065 --> 00:01:39.081
+without any value, like that...
+I can play the video, you see...
+
+18
+00:01:39.081 --> 00:01:44.167
+I'm using Google Chrome and the mp4 format
+for
+
+19
+00:01:45.067 --> 00:01:48.130
+the video, that is one of the the most popular
+and
+
+20
+00:01:49.003 --> 00:01:55.025
+the best supported today.
+But it's always better, and it's a best practice,
+
+21
+00:01:55.052 --> 00:02:03.100
+to provide different encodings for the video.In
+that case, do not use the src . Instead, provide,
+
+22
+00:02:04.000 --> 00:02:12.093
+using the source element, different encodings
+for your videos.
+
+23
+00:02:12.093 --> 00:02:15.124
+This is a good practice... now I propose the
+video
+
+24
+00:02:16.024 --> 00:02:23.043
+in webm, ogg andin mp4 formats.
+The browser will choose the one it prefers.
+
+25
+00:02:23.043 --> 00:02:30.099
+Either the first one it can play, or
+the one than, in its opinion, has the best
+
+26
+00:02:30.099 --> 00:02:34.173
+results.
+So, here, now I don't know exactly which one
+
+27
+00:02:35.073 --> 00:02:39.079
+is
+played, but I'm pretty sure I will target
+
+28
+00:02:40.033 --> 00:02:46.111
+many more
+browsers than with only a single encoding.
+
+29
+00:02:47.011 --> 00:02:54.017
+What are the other attributes ?
+I can specifythe width and the height
+
+30
+00:02:54.017 --> 00:03:01.068
+In that case I've got a very small video,
+100 pixels width and height,
+
+31
+00:03:01.068 --> 00:03:05.104
+Other attributes that are interesting... there
+is the
+
+32
+00:03:06.004 --> 00:03:11.008
+preload attribute. You can see that the video
+started downloading here...
+
+33
+00:03:11.044 --> 00:03:17.117
+and that the black square corresponds to the
+default size of the video. We call the size
+
+34
+00:03:18.017 --> 00:03:23.070
+"metadata". This is the buffer
+that is filling up.
+
+35
+00:03:23.007 --> 00:03:30.104
+So, if I'm using preload="none",in that case
+it asks
+
+36
+00:03:31.067 --> 00:03:35.113
+the browser to do nothing,not to start preloading
+the video,
+
+37
+00:03:36.013 --> 00:03:41.016
+not preloading metadata...
+This is the recommended value for mobile devices,
+
+38
+00:03:41.016 --> 00:03:48.049
+or for web sites that have a lot of videos,
+and you don't want them to preload.
+
+39
+00:03:48.049 --> 00:03:55.378
+If you type in "metadata", this is another
+possible value... in that case the video
+
+40
+00:03:55.819 --> 00:04:01.310
+is not preloading but the size of the video,
+the encoding
+
+41
+00:04:01.031 --> 00:04:05.320
+and other metadata have been downloaded so
+that the player
+
+42
+00:04:05.599 --> 00:04:16.655
+can have a reserved size on the page...
+I recommend using the default value if you
+
+43
+00:04:17.159 --> 00:04:19.237
+are targeting
+desktops, or preload="none"...
+
+44
+00:04:19.939 --> 00:04:22.015
+Another attribute that is not recommended
+for mobile
+
+45
+00:04:22.699 --> 00:04:29.711
+devices is autoplay In that case the video
+starts being
+
+46
+00:04:29.819 --> 00:04:39.823
+played as soon as the buffer has got enough
+data.Another attribute is loop.It's self explanatory.
+
+47
+00:04:40.219 --> 00:04:46.232
+If you go to$
+the end of the video, it will loop.
+
+48
+00:04:46.349 --> 00:04:53.460
+You saw the mostuseful attributes...Another
+one that I
+
+49
+00:04:53.046 --> 00:05:00.495
+recommend, in order to avoid this black square,
+is the poster attribute. You type in poster
+
+50
+00:05:00.909 --> 00:05:04.110
+equals
+and you can add the URL of an image.
+
+51
+00:05:04.011 --> 00:05:07.033
+I uploaded an image, a screenshot of this
+video,
+
+52
+00:05:07.033 --> 00:05:14.682
+to the imgur web site.
+Like this... we get a preview of the video
+
+53
+00:05:14.979 --> 00:05:23.580
+Notice that Internet Explorer does not recognize
+URLs here. It always chooses the first fram
+
+54
+00:05:23.058 --> 00:05:27.707
+of the video
+It's a bit of a problem, so if you don't want
+
+55
+00:05:28.229 --> 00:05:33.297
+this behavior,
+you will need to use a custom player or follow
+
+56
+00:05:33.909 --> 00:05:37.994
+the links
+to the articles Ian Devlin wrote, where he
+
+57
+00:05:38.759 --> 00:05:44.765
+explains how
+to this behavior in Internet Explorer using
+
+58
+00:05:44.819 --> 00:05:52.831
+some JavaScript.
+That's all for this video, I hope you enjoyed
+
+59
+00:05:52.939 --> 00:05:56.968
+it, the rest
+of the page is a textual reference to all
+
+60
+00:05:57.229 --> 00:05:58.297
+the attributes.
+
